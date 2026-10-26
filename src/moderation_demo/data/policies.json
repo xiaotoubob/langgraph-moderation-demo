@@ -1,0 +1,81 @@
+[
+  {
+    "policy_id": "P-THREAT",
+    "section_id": "1",
+    "version": "1.0",
+    "title": "针对个人的人身威胁",
+    "rule": "禁止对可识别的个人表达实施人身伤害的威胁。",
+    "exceptions": [
+      "为举报、求助或反对威胁而明确引用他人言论，且没有表示赞同，不按威胁处理。",
+      "普通体育活动、游戏内约定和明确无现实威胁的表达不适用本条。"
+    ],
+    "examples": {
+      "violation": [
+        "我明晚去你家打断你的腿。"
+      ],
+      "allow": [
+        "明天下午一起打球吧。"
+      ]
+    },
+    "keywords": [
+      "威胁",
+      "伤害",
+      "个人",
+      "threat"
+    ],
+    "source": "src/moderation_demo/data/policies.json#P-THREAT/1"
+  },
+  {
+    "policy_id": "P-ABUSE",
+    "section_id": "1",
+    "version": "1.0",
+    "title": "针对个人的直接辱骂",
+    "rule": "禁止针对可识别个人的直接贬损人格或羞辱性辱骂。",
+    "exceptions": [
+      "针对观点、产品或方案的批评，未转为针对个人的辱骂，不适用本条。",
+      "明确为举报或反对而引用辱骂，且没有表示赞同，不按直接辱骂处理。"
+    ],
+    "examples": {
+      "violation": [
+        "你就是个废物，滚出这个群。"
+      ],
+      "allow": [
+        "这个方案的论证不充分，我不同意。"
+      ]
+    },
+    "keywords": [
+      "辱骂",
+      "羞辱",
+      "贬损",
+      "abuse"
+    ],
+    "source": "src/moderation_demo/data/policies.json#P-ABUSE/1"
+  },
+  {
+    "policy_id": "P-PRIVACY",
+    "section_id": "1",
+    "version": "1.0",
+    "title": "未经同意披露私人联系方式",
+    "rule": "禁止未经本人同意披露他人的私人联系方式，包括用于骚扰的电话信息。",
+    "exceptions": [
+      "本人自愿提供自己的联系方式，且没有涉及他人隐私，不适用本条。",
+      "引用已经公开用于业务联系的官方联系方式，不适用本条。"
+    ],
+    "examples": {
+      "violation": [
+        "这是他未公开的私人电话，大家打过去骚扰他。"
+      ],
+      "allow": [
+        "请通过官方网站公布的企业热线联系客服。"
+      ]
+    },
+    "keywords": [
+      "隐私",
+      "私人",
+      "电话",
+      "同意",
+      "privacy"
+    ],
+    "source": "src/moderation_demo/data/policies.json#P-PRIVACY/1"
+  }
+]

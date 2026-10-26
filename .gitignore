@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local checkpoints and teaching run outputs (may contain submitted text).
+.local/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
